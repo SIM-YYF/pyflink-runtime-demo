@@ -1,0 +1,10 @@
+zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties &
+kafka-server-start /usr/local/etc/kafka/server.properties &
+kafka-console-producer --broker-list localhost:9092 --topic test
+kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning
+
+kafka-topics --zookeeper localhost:2181 --list
+
+
+kafka-topics --delete --zookeeper localhost:2181 --topic test
+rm -r /var/kafka/log/tmp/test*

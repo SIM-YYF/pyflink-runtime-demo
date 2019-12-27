@@ -1,0 +1,8 @@
+setuptools >= 21.0.0
+numpy
+pandas==0.23.4
+python-intervals
+py4j
+apache-flink
+lz4
+kafka-python

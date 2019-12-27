@@ -1,0 +1,10 @@
+
+mvn clean install -DskipTests -Dfast
+cd flink-python
+
+python3 setup.py sdist bdist_wheel
+
+cd dist/
+
+
+pip3 install ./apache-flink-1.9.dev0.tar.gz  -t /Users/ywf/.local/share/virtualenvs/pyflink-runtime-demo/lib/python3.6/site-packages
